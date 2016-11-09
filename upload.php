@@ -41,7 +41,7 @@ if(isset($_POST["submit"])) {
 			echo "檔案名稱: ". basename( $_FILES["fileToUpload"]["name"]). "<br>";
 			echo "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>";
 			if($uploadOk == 1){ //照片
-				echo '<img src="/app/upload/' .$_FILES["fileToUpload"]["name"]. '">';
+				echo '<img src="/upload/' .$_FILES["fileToUpload"]["name"]. '">';
 				//echo '<img src="14125590_10208467737069252_1939695402823578945_o.jpg">';
 				//echo '<img src="file/'.$_FILES['file']['name'].'">';
 			}
