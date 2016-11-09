@@ -1,6 +1,6 @@
 <html>
 <?php
-$dir = "/app/rainvisitor/";
+$dir = "/app/";
 
 // 判斷是否為目錄
 if(is_dir($dir)){
