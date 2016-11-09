@@ -21,7 +21,6 @@ echo $s[$i]."<br>";
 echo "<button type=button formmethod=get onClick=location.href='think.php?count=$i&method=up'>上一個</button>";
 echo "<button type=button formmethod=get onClick=location.href='think.php?count=$i&method=rand'>隨機</button>";
 echo "<button type=button formmethod=get onClick=location.href='think.php?count=$i&method=next'>下一個</button>";
-echo "<button type=button formmethod=get onClick=location.href='think.php?count=$i&method=next'>下一個</button>";
 fclose($myfile);
 ?>
 
