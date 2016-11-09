@@ -12,6 +12,7 @@ while (($file = readdir($dh)) !== false) {
 if (strpos( $file, '.php')){
 echo "filename: $file : filetype: " . filetype($dir . $file) . "<br>";
 }
+echo "filename: $file : filetype: " . filetype($dir . $file) . "<br>";
 }
 closedir($dh);
 }
