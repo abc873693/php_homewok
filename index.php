@@ -1,6 +1,6 @@
 <html>
 <?php
-$dir = "/etc/php/";
+$dir = "/";
 
 // 判斷是否為目錄
 if(is_dir($dir)){
