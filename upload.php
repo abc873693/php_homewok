@@ -22,11 +22,6 @@ if(isset($_POST["submit"])) {
 		echo "抱歉!檔案已經存在 <br>";
 		$uploadOk = 0;
 	}
-	// Check file size
-	if ($_FILES["fileToUpload"]["size"] > 500000) {
-		echo "抱歉!檔案太大";
-		$uploadOk = 0;
-	}
 	// Allow certain file formats
 	if($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg" || $imageFileType == "gif" ) {
 		$uploadOk = 1;
@@ -46,7 +41,7 @@ if(isset($_POST["submit"])) {
 			echo "檔案名稱: ". basename( $_FILES["fileToUpload"]["name"]). "<br>";
 			echo "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>";
 			if($uploadOk == 1){ //照片
-				echo '<img src="/AppServ/www/upload/' .$_FILES["fileToUpload"]["name"]. '">';
+				echo '<img src="/app/upload/' .$_FILES["fileToUpload"]["name"]. '">';
 				//echo '<img src="14125590_10208467737069252_1939695402823578945_o.jpg">';
 				//echo '<img src="file/'.$_FILES['file']['name'].'">';
 			}
