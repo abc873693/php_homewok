@@ -11,7 +11,7 @@
 </html>
 
 <?php
-$target_dir = "/upload/";
+$target_dir = "/app/upload/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -41,12 +41,12 @@ if(isset($_POST["submit"])) {
 			echo "檔案名稱: ". basename( $_FILES["fileToUpload"]["name"]). "<br>";
 			echo "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>";
 			if($uploadOk == 1){ //照片
-				echo '<img src="/upload/' .$_FILES["fileToUpload"]["name"]. '">';
+				echo '<img src="/app/upload/' .$_FILES["fileToUpload"]["name"]. '">';
 				//echo '<img src="14125590_10208467737069252_1939695402823578945_o.jpg">';
 				//echo '<img src="file/'.$_FILES['file']['name'].'">';
 			}
 			else if($uploadOk == 2){  //文字檔
-				$myfile = fopen('/upload/'.$_FILES["fileToUpload"]["name"], "r") or die("Unable to open file!");
+				$myfile = fopen('/app/upload/'.$_FILES["fileToUpload"]["name"], "r") or die("Unable to open file!");
 				// Output one line until end-of-file
 				$x = 0;
 				while(!feof($myfile)) {
@@ -56,7 +56,7 @@ if(isset($_POST["submit"])) {
 				fclose($myfile);
 			}
 			else if($uploadOk == 3){	//表格
-				$handle = fopen('/upload/'.$_FILES["fileToUpload"]["name"],"r")or die("Unable to open file!");
+				$handle = fopen('/app/upload/'.$_FILES["fileToUpload"]["name"],"r")or die("Unable to open file!");
 				echo '<table border="1" ><tbody>';
 				while ($data = fgetcsv($handle, 1000, ",")) {
 					$num = count($data);
