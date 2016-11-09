@@ -1,7 +1,7 @@
 <html>
 <?php
 $dir = "/app/";
-
+echo "首頁";
 // 判斷是否為目錄
 if(is_dir($dir)){
 
@@ -10,9 +10,9 @@ while (($file = readdir($dh)) !== false) {
 
 //只過讀取出php 的檔案
 if (strpos( $file, '.php')){
-echo "filename: $file : filetype: " . filetype($dir . $file) . "<br>";
+//echo "filename: $file : filetype: " . filetype($dir . $file) . "<br>";
+echo "<DT><A HREF=\"/$file\" >$file</A><br>";
 }
-echo "filename: $file : filetype: " . filetype($dir . $file) . "<br>";
 }
 closedir($dh);
 }
