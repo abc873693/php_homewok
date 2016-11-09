@@ -9,10 +9,9 @@ if ($dh = opendir($dir)) {
 while (($file = readdir($dh)) !== false) {
 
 //只過讀取出php 的檔案
-if (strpos( $file2, '.php')){
-echo "filename: $file : filetype: " . filetype($dir . $file) . "\n";
+if (strpos( $file, '.php')){
+echo "filename: $file : filetype: " . filetype($dir . $file) . "<br>";
 }
-
 }
 closedir($dh);
 }
