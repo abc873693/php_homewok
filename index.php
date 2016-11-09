@@ -16,8 +16,10 @@ echo "filename: $file : filetype: " . filetype($dir . $file) . "\n";
 }
 closedir($dh);
 }
+else echo "無法打開";
 
 }
+else echo "不是目錄";
 ?>
 
 </html>
