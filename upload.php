@@ -42,7 +42,7 @@ if(isset($_POST["submit"])) {
 	}
 	// Check if $uploadOk is set to 0 by an error
 	if ($uploadOk != 0) {
-		if (move_uploaded_file(.$_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 			echo "檔案名稱: ". basename( $_FILES["fileToUpload"]["name"]). "<br>";
 			echo "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>";
 			if($uploadOk == 1){ //照片
