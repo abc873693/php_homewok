@@ -1,0 +1,22 @@
+{
+  "name": "php_homewok",
+  "description": "高應大 網路資料庫程式設計 作業",
+  "scripts": {
+  },
+  "env": {
+    "version": "1.1.2"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ]
+}
